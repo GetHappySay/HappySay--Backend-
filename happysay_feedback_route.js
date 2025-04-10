@@ -1,7 +1,15 @@
 
 const express = require("express");
 const router = express.Router();
-
+const db = {
+  saveFeedback: async (feedback) => {
+    console.log("Mock saving feedback:", feedback);
+    return { id: "mock-feedback-id", ...feedback };
+  },
+  updateFeedbackRouted: async (feedbackId) => {
+    console.log("Mock update for feedback ID:", feedbackId);
+  },
+};
 
 // Feedback submission
 router.post("/api/feedback/:visit_id", async (req, res) => {
