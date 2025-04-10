@@ -1,7 +1,7 @@
 
 const express = require("express");
 const router = express.Router();
-const db = require("../db");
+
 
 // Feedback submission
 router.post("/api/feedback/:visit_id", async (req, res) => {
