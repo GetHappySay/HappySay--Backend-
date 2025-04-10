@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const { sendSMS } = require("./utils/twilio"); // Your Twilio utility
-const db = require("../db"); // Your DB connection/query functions
+const db = require("./db"); // Your DB connection/query functions
 
 // POS Visit Trigger
 router.post("/api/visit/pos", async (req, res) => {
